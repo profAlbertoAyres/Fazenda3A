@@ -10,6 +10,9 @@
                             <a href="#" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a href="animais.php" class="nav-link">Animais</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="racas.php" class="nav-link">Raça</a>
                         </li>
                         <li class="nav-item">
