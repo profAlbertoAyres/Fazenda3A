@@ -1,0 +1,72 @@
+.dest{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../Images/banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 4vw;
+    text-align: center;
+    text-shadow: 
+        1px 1px 0 #fff,
+        2px 2px 4px #f00;
+    font-weight: bold;
+}
+
+section{
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #ddd;
+    /* background: linear-gradient(to right, #5fc2cf, #70aae7); */
+    /* background: linear-gradient(45deg, #5fc2cf, #70aae7, #252525); */
+    /* background: radial-gradient(circle, #ac1e1e, #ccc); */
+    /* background:  conic-gradient(from 45deg, #f00, #0f0, #00f, #ddd); */
+    border-radius: 10px;
+}
+
+
+section h2{
+    text-align: center;
+    border-bottom: 2px solid #2c3e50;
+    /* font-family: var(--font-secundaria); */
+
+}
+
+section .msn{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+section .msn img{
+    width: 40%;
+    height: auto;
+}
+
+section p, ul{
+    font-size: 20pt;
+    font-family: var(--font-secundaria);
+}
+
+@media screen and (max-width:768px) {
+    main{
+        width: 100%;
+    }
+    section .msn{
+        flex-direction: column;
+    }
+
+    section p,ul{
+        text-align: justify;
+    }
+    section .msn img{
+        width: 100%;
+        height: auto;
+    }   
+    .dest{
+        padding: 10px;
+    }
+    
+}

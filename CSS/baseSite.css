@@ -1,0 +1,64 @@
+@import url('base.css');
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-claro);
+}
+header img{
+    width: 100px;
+}
+header .empresa{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav-custom{
+    background-color: var(--cor-fundo);
+}
+
+.navbar-nav{
+    gap: 15px;
+}
+
+.nav-link{  
+    color: var(--cor-texto-claro);
+    box-shadow:     0 1px 5px rgba(251, 250,250, 0.1);
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover{
+    color: var(--cor-texto-claro);  
+    box-shadow: 0 16px 32px rgba(32, 3, 3, 0.3);
+    transform: translateY(-4px);
+}
+
+main{
+    width: 90%;
+    margin: 10px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    background-color: var(--cor-fundo-claro);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+
+@media screen and (max-width:992px) {
+    .nav-link, .nav-link:hover{ 
+        box-shadow: none;
+        transform: none;
+    }
+    
+}
+@media screen and (max-width:600px) {
+    header{
+        flex-direction: column;
+    }
+    
+}
