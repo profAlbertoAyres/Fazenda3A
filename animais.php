@@ -49,7 +49,7 @@
                         <td><?php echo $animal->id_lote; ?></td>
                         <td>
                             <form action="gerAnimal.php" method="post">
-                                <input type="hidden" name="idAnimal">
+                                <input type="hidden" name="idAnimal" value="<?php echo $animal->id_animal ?>">
                                 <button type="submit" name="btnEditar" class="btn btn-primary btn-sm">
                                     <i class="bi bi-pencil-square"></i>
                                 </button>
