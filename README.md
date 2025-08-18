@@ -1,4 +1,4 @@
-# ðŸ“š Projeto [Nome do Sistema]
+# 📚 Projeto [Nome do Sistema]
 
 ---
 
