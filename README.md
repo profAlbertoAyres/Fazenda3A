@@ -2,12 +2,12 @@
 
 ---
 
-## ðŸ‘¨â€ðŸ« Professor Orientador
+## 👨‍🏫 Professor Orientador
 - Nome do professor
 
 ---
 
-## ðŸ‘¥ Integrantes do Grupo
+## 👫 Integrantes do Grupo
 - **Aluno 1** â€“ ResponsÃ¡vel por: 
 - **Aluno 2** â€“ ResponsÃ¡vel por: 
 - **Aluno 3** â€“ ResponsÃ¡vel por: 
@@ -16,7 +16,7 @@
 
 ---
 
-## ðŸ› ï¸ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 - PHP  
 - MySQL  
 - HTML, CSS, Bootstrap  
@@ -24,7 +24,7 @@
 
 ---
 
-## ðŸ—‚ï¸ Estrutura do Projeto
+## 🗃️ Estrutura do Projeto
 ```
 /classes        
 /css            
@@ -36,7 +36,7 @@ README.md
 
 ---
 
-## ðŸ—„ï¸ Banco de Dados
+## 🗄️ Banco de Dados
 Nome do banco: **__________**
 
 Tabelas principais:
@@ -46,7 +46,7 @@ Tabelas principais:
 
 ---
 
-## ðŸš€ Como Executar o Projeto
+## 🚀 Como Executar o Projeto
 1. Clone este repositÃ³rio  
 2. Importe o arquivo SQL no MySQL  
 3. Configure `config.php`  
@@ -54,14 +54,14 @@ Tabelas principais:
 
 ---
 
-## âœ… Funcionalidades Implementadas
+## ☑️ Funcionalidades Implementadas
 - [ ] __________  
 - [ ] __________  
 - [ ] __________  
 
 ---
 
-## ðŸ“† Cronograma / DivisÃ£o de Tarefas
+## 🗓️ Cronograma / Divisão de Tarefas
 | Data       | Tarefa              | ResponsÃ¡vel | Status     |
 |------------|---------------------|-------------|------------|
 | __/__/____ | ___________________ | ___________ | Pendente   |
@@ -70,10 +70,10 @@ Tabelas principais:
 
 ---
 
-## ðŸ“¸ Prints do Sistema
+## 📺 Prints do Sistema
 *(Adicionar imagens das telas aqui)*
 
 ---
 
-## ðŸ“„ LicenÃ§a
+## 📜 Licença
 Projeto desenvolvido para fins educacionais.
