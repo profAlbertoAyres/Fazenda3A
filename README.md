@@ -8,11 +8,11 @@
 ---
 
 ## 👫 Integrantes do Grupo
-- **Aluno 1** â€“ ResponsÃ¡vel por: 
-- **Aluno 2** â€“ ResponsÃ¡vel por: 
-- **Aluno 3** â€“ ResponsÃ¡vel por: 
-- **Aluno 4** â€“ ResponsÃ¡vel por: 
-- **Aluno 5** â€“ ResponsÃ¡vel por: 
+- **Aluno 1** - Responsável por: 
+- **Aluno 2** - Responsável por: 
+- **Aluno 3** - Responsável por: 
+- **Aluno 4** - Responsável por: 
+- **Aluno 5** - Responsável por: 
 
 ---
 
@@ -47,9 +47,9 @@ Tabelas principais:
 ---
 
 ## 🚀 Como Executar o Projeto
-1. Clone este repositÃ³rio  
+1. Clone este repositório  
 2. Importe o arquivo SQL no MySQL  
-3. Configure `config.php`  
+3. Configure `config.ini`  
 4. Acesse no navegador: `http://localhost/[nome_projeto]`
 
 ---
@@ -62,7 +62,7 @@ Tabelas principais:
 ---
 
 ## 🗓️ Cronograma / Divisão de Tarefas
-| Data       | Tarefa              | ResponsÃ¡vel | Status     |
+| Data       | Tarefa              | Responsável | Status     |
 |------------|---------------------|-------------|------------|
 | __/__/____ | ___________________ | ___________ | Pendente   |
 | __/__/____ | ___________________ | ___________ | Pendente   |
