@@ -43,4 +43,10 @@ abstract class CRUD{
             return false;
         }
     }
+    public function sp_exibir(string $procedure){
+        $sql = "call {$procedure}";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
 }

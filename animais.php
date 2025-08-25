@@ -23,6 +23,8 @@
                     <th class="text-center">#</th>
                     <th>Identificador</th>
                     <th>Mãe</th>
+                    <th>Nascimento</th>
+                    <th>Sexo</th>
                     <th>Raça</th>
                     <th>Lote</th>
                     <th>Ações</th>
@@ -35,7 +37,7 @@
 
             $o_animal = new Animal();
             // Variável para receber os registros do banco de dados
-            $animais = $o_animal->all();
+            $animais = $o_animal->sp_exibir('exibir_animal()');
             ?>
             <tbody>
                 <?php
@@ -44,9 +46,11 @@
                     <tr>
                         <td class="text-center"><?php echo $animal->id_animal; ?></td>
                         <td><?php echo $animal->identificador; ?></td>
-                        <td><?php echo $animal->id_mae; ?></td>
-                        <td><?php echo $animal->id_raca; ?></td>
-                        <td><?php echo $animal->id_lote; ?></td>
+                        <td><?php echo $animal->mae; ?></td>
+                        <td><?php echo $animal->nascimento; ?></td>
+                        <td><?php echo $animal->sexo; ?></td>
+                        <td><?php echo $animal->nome; ?></td>
+                        <td><?php echo $animal->descricao; ?></td>
                         <td>
                             <form action="gerAnimal.php" method="post">
                                 <input type="hidden" name="idAnimal" value="<?php echo $animal->id_animal ?>">
