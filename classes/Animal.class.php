@@ -34,7 +34,7 @@ class Animal extends CRUD
     }
     public function setIdMae($idMae)
     {
-        $this->idMae = $idMae;
+        $this->idMae = !empty($idMae) ? (int) $idMae : null;
     }
     public function setIdLote($idLote)
     {
@@ -72,7 +72,8 @@ class Animal extends CRUD
         return $this->idLote;
     }
 
-    public function add() {
+    public function add()
+    {
         $sql = "INSERT INTO $this->table (identificador, data_nascimento, sexo, id_raca, id_mae, id_lote) VALUES (:identificador, :data_nascimento, :sexo, :id_raca, :id_mae, :id_lote)";
         $stmt = $this->db->prepare($sql);
         $stmt->bindParam(":identificador", $this->identificador, PDO::PARAM_STR);
@@ -84,7 +85,8 @@ class Animal extends CRUD
         return $stmt->execute();
     }
 
-    public function update(string $campo, int $id) {
+    public function update(string $campo, int $id)
+    {
         $sql = "UPDATE $this->table SET identificador = :identificador, data_nascimento = :data_nascimento, sexo = :sexo, id_raca = :id_raca, id_mae = :id_mae, id_lote = :id_lote WHERE $campo=:id";
         $stmt = $this->db->prepare($sql);
         $stmt->bindParam(":identificador", $this->identificador, PDO::PARAM_STR);

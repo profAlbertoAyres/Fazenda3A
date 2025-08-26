@@ -8,7 +8,7 @@ if (filter_has_var(INPUT_POST, 'btnGravar')):
     $animal->setIdentificador(filter_input(INPUT_POST, 'identificador'));
     $animal->setDataNascimento(filter_input(INPUT_POST, 'nascimento'));
     $animal->setSexo(filter_input(INPUT_POST, 'sexo'));
-    $animal->setIdMae(filter_input(INPUT_POST, 'mae'));
+    $animal->setIdMae(filter_input(INPUT_POST, 'mae')) ?: null;
     $animal->setIdRaca(filter_input(INPUT_POST, 'raca'));
     $animal->setIdLote(filter_input(INPUT_POST, 'lote'));
     if (empty($idAnimal)):
