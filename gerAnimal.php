@@ -63,7 +63,7 @@
             <div class="col-md-4 mt-3">
                 <label for="mae" class="form-label">Mãe</label>
                 <select name="mae" id="mae" class="form-select">
-                    <option>Selecione a Mãe</option>
+                    <option value="">Selecione a Mãe</option>
                     <?php
                     $maes = $mae->all();
                     $mae_selecionada = $eAnimal->id_mae ?? '';
