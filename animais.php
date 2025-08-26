@@ -51,11 +51,20 @@
                         <td><?php echo $animal->sexo; ?></td>
                         <td><?php echo $animal->nome; ?></td>
                         <td><?php echo $animal->descricao; ?></td>
-                        <td>
+                        <td class="d-flex gap-2">
+
+                            <!-- Botão de Editar -->
                             <form action="gerAnimal.php" method="post">
                                 <input type="hidden" name="idAnimal" value="<?php echo $animal->id_animal ?>">
                                 <button type="submit" name="btnEditar" class="btn btn-primary btn-sm">
                                     <i class="bi bi-pencil-square"></i>
+                                </button>
+                            </form>
+                            <!-- Botão de excluir -->
+                            <form action="dbAnimal.php" method="post">
+                                <input type="hidden" name="idAnimal" value="<?php echo $animal->id_animal ?>">
+                                <button type="submit" name="btnDeletar" class="btn btn-danger btn-sm">
+                                    <i class="bi bi-trash"></i>
                                 </button>
                             </form>
                         </td>
