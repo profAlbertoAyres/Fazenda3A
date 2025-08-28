@@ -51,10 +51,14 @@ elseif (filter_has_var(INPUT_POST, "btnDeletar")):
         </script>";
     endif;
 elseif(filter_has_var(INPUT_POST,'btnLogar')):
+    $usuario->setNome(filter_input(INPUT_POST,'nome'));
+    $usuario->setSenha(filter_input(INPUT_POST,'senha'));
+    $mensagem  = $usuario->login();
     echo "<script>
-        window.alert('Calma ainda vamos implementar o logar.'); 
+        window.alert('{$mensagem}'); 
         window.open(document.referrer,'_self');
         </script>";
+
 elseif(filter_has_var(INPUT_POST,'btnAltSenha')):
     echo "<script>
         window.alert('Calma ainda vamos implementar o alterar senha.'); 

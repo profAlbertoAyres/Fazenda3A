@@ -1,3 +1,7 @@
+<?php
+    require_once "verifica_usuario.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,7 +15,7 @@
 </head>
 
 <body>
-    <?php require_once "_parts/_menu-site.php"; ?>
+    <?php require_once "_parts/_menu.php"; ?>
 
     <footer class="footer mt-auto">
         <?php require_once "_parts/_footer.php"; ?>

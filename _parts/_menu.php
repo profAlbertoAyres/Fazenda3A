@@ -13,16 +13,20 @@
                             <a href="animais.php" class="nav-link">Animais</a>
                         </li>
                         <li class="nav-item">
+                            <a href="#" class="nav-link">Categoria</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="racas.php" class="nav-link">Raça</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">Lote</a>
                             </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Categoria</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="#" class="nav-link">Produto</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="usuarios.php" class="nav-link">Usuário</a>
                         </li>
                     </ul>
                 </div>

@@ -113,4 +113,33 @@ class Usuario extends CRUD
             return "Erro inesperado: " . $e->getMessage();
         }
     }
+
+    public function login(){
+        $sql = "SELECT * FROM {$this->table} WHERE nome = :nome";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindParam(':nome', $this->nome);
+        $stmt->execute();
+        if($stmt->rowCount()>0){
+            if(session_status()===PHP_SESSION_NONE){
+                session_start();
+            }
+            $usuario = $stmt->fetch(PDO::FETCH_OBJ);
+            if(password_verify($this->senha, $usuario->senha)){
+                $_SESSION['user_id'] = $usuario->id_usuario;
+                $_SESSION['user_name'] = $usuario->nome;
+                header("Location: dashboard.php");
+                exit();
+            }
+        }
+        return "Usuário ou senha incorreta. Por favor, tente novamente.";
+    }
+
+    public function logout()
+    {
+        session_unset();
+        session_destroy();
+        header("Location:index.php");
+        exit();
+    }
+
 }

@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <?php require_once "_parts/_menu-site.php"; ?>
     <div class="flex-grow-1 d-flex justify-content-center align-items-center">
         <div class="card shadow rounded-3 p-3">
             <form method="post" action="dbUsuario.php" class="row">
