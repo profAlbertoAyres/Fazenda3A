@@ -30,6 +30,9 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav">
+
+                    <?php
+                    ?>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <?php
