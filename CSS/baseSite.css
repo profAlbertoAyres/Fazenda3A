@@ -9,6 +9,7 @@ header{
     color: var(--cor-texto-claro);
 }
 header img{
+    
     width: 100px;
 }
 header .empresa{
@@ -19,6 +20,10 @@ header .empresa{
 
 .nav-custom{
     background-color: var(--cor-fundo);
+}
+
+.nav-custom a{
+    color: blue;
 }
 
 .navbar-nav{
