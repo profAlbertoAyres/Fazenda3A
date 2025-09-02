@@ -60,10 +60,23 @@ elseif(filter_has_var(INPUT_POST,'btnLogar')):
         </script>";
 
 elseif(filter_has_var(INPUT_POST,'btnAltSenha')):
-    echo "<script>
-        window.alert('Calma ainda vamos implementar o alterar senha.'); 
-        window.open(document.referrer,'_self');
-        </script>";
+    if(session_status()===PHP_SESSION_NONE){
+        session_start();
+    }
+    $usuario->setNome($_SESSION['user_name']);
+    $senha = filter_input(INPUT_POST,'senha');
+    $confirma = filter_input(INPUT_POST,'confirma');
+    if($senha != $confirma){
+        echo
+        "<script>
+            window.alert('Senha e confirmação diferentes.');
+            window.open(document.referrer,'_self');
+        </script>
+        ";
+    }
+    $usuario->setSenha($senha);
+    $senhaAtual = filter_input(INPUT_POST,'senhaAtual');
+    
 elseif(filter_has_var(INPUT_POST,'btnAltEmail')):
     echo "<script>
         window.alert('Calma ainda vamos implementar o alterar e-mail.'); 

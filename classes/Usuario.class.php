@@ -142,4 +142,28 @@ class Usuario extends CRUD
         exit();
     }
 
+    public function alterarSenha($senhaAtual){
+        try{
+            $sql = "SELECT * FROM {$this->table} WHERE nome = :nome";
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindParam(':nome',$this->nome);
+            $stmt->execute();
+            if($stmt->rowCount()>0){
+                $usuario = $stmt->fetch(PDO::FETCH_OBJ);
+                if(password_verify($senhaAtual,$usuario->senha)){
+                    $novaSenha = password_hash($this->senha,PASSWORD_DEFAULT);
+                    $sql = "UPDATE {$this->table} SET senha = :novaSenha WHERE nome = :nome";
+                    $stmt = $this->db->prepare($sql);
+                    $stmt->bindParam(':novaSenha',$novaSenha);
+                    $stmt->bindParam(':nome',$this->nome);
+                    return $stmt->execute();
+                }
+                return false;
+            }
+            return false;
+        }catch(PDOException $e){
+            return false;
+        }
+    }
+
 }

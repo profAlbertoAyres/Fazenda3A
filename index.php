@@ -20,34 +20,7 @@
         </div>
     </header>
     <!-- menu de navegação -->
-    <nav class="navbar navbar-expand-lg nav-custom" data-bs-theme="dark">
-        <div class="container-fluid">
-            <button class="navbar-toggler ms-auto text-light" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <i class="bi bi-list fs-2 text-light "></i>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Sobre">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Atividades">Atividades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Estutura">Nossa Estrutura</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Contato">Contato</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php require_once "_parts/_menu-site.php" ?>
     <main>
         <div class="dest">
             Qualidade e Sustentabilidade na Produção de Gado de Corte!
