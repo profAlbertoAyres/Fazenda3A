@@ -1,5 +1,5 @@
 <?php
-    require_once "verifica_usuario.php";
+    // require_once "verifica_usuario.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
