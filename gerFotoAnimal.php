@@ -22,7 +22,7 @@
             require_once "classes/{$class}.class.php";
         });
         ?>
-        <form method="post" action="dbFotoAnimal.php" class="row g-3 mt-3">
+        <form method="post" action="dbFotoAnimal.php" class="row g-3 mt-3" enctype="multipart/form-data">
             <input type="hidden" name="idAnimal" value="">
             <input type="hidden" name="idFoto" value="">
             <div class="col-md-6 mt-3">

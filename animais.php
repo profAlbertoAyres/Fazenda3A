@@ -71,6 +71,9 @@
                                     <i class="bi bi-trash"></i>
                                 </button>
                             </form>
+                            <!-- Botão de Adicionar Fotos -->
+                             <a href="fotoAnimal.php?idAnimal=<?php echo $animal->id_animal; ?>" class="btn btn-success btn-sm"><i class="bi bi-camera-fill"></i></a>
+
                         </td>
                     </tr>
                     <?php
