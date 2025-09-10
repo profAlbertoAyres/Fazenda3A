@@ -8,7 +8,7 @@ CREATE TABLE nutricao (
     status TINYINT DEFAULT 1
 );
 
-INSERT INTO nutricao_bovinos (fase_produtiva, titulo, descricao, autor) VALUES
+INSERT INTO nutricao (fase_produtiva, titulo, descricao, autor) VALUES
 ('Bezerro em aleitamento', 'Colostro nas primeiras horas', 
 'O fornecimento de colostro nas primeiras horas de vida do bezerro é considerado a prática nutricional mais importante para garantir a sobrevivência e o bom desenvolvimento do animal. O colostro é rico em imunoglobulinas, que conferem ao recém-nascido a imunidade passiva necessária para enfrentar os primeiros desafios ambientais e patogênicos. O ideal é que o bezerro consuma de 4 a 6 litros de colostro dentro das primeiras 6 horas de vida, com a primeira mamada ocorrendo preferencialmente até 2 horas após o nascimento. Além da quantidade, a qualidade do colostro deve ser observada, verificando-se a densidade e o teor de anticorpos. Outro ponto fundamental é a higiene durante o fornecimento, já que colostro contaminado pode causar diarreias e comprometer a absorção de nutrientes. O manejo adequado desta prática tem reflexo direto na saúde, na taxa de ganho de peso e no desempenho futuro do animal dentro do sistema de produção, reduzindo mortalidade e aumentando a eficiência da criação.', 
 'Dr. João Almeida'),
