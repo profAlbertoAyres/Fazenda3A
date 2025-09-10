@@ -66,7 +66,6 @@
             </div>
         </section>
         <!-- Finalizamos o main -->
-
     </main>
     <footer>
         <?php require_once "_parts/_footer.php" ?>

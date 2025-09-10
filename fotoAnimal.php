@@ -45,10 +45,10 @@ if (filter_has_var(INPUT_GET, "idAnimal")) {
                 ?>
 
                 <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="uploads/<?= $foto->nome ?>" class="card-img-top" alt="...">  
                     <div class="card-body">
 
-                        <p class="card-text">Legenda</p>
+                        <p class="card-text"><?= $foto->legenda ?></p>
                         <p>
                         <form action="" method="post">
                             <input type="hidden" name="idFoto" value="">

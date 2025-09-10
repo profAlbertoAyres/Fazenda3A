@@ -23,7 +23,10 @@
         });
         $idAnimal = null;
         if (filter_has_var(INPUT_POST, 'btnEditar')):
-            //implementar depois
+            $f = new FotoAnimal();
+            $idFoto = filter_input(INPUT_POST,'idAnimal');
+            $foto = $f->search('id_foto',$idFoto);
+            $idAnimal = $foto->id_foto;
         elseif (filter_has_var(INPUT_GET, 'idAnimal')):
             $idAnimal = filter_input(INPUT_GET,'idAnimal');
         endif;
