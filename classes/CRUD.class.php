@@ -71,16 +71,16 @@ abstract class CRUD
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function iniciaTrans()
+    public function iniciarTransacao()
     {
         $this->db->beginTransaction();
     }
 
-    public function confirmaTrans()
+    public function confirmarTransacao()
     {
         $this->db->commit();
     }
-    public function cancelarTrans()
+    public function cancelarTransacao()
     {
         $this->db->rollBack();
     }
