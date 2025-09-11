@@ -16,11 +16,8 @@
 
 <body>
     <?php require_once "_parts/_menu.php"; ?>
-
-    <footer class="footer mt-auto">
+<main></main>
         <?php require_once "_parts/_footer.php"; ?>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

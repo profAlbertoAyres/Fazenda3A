@@ -33,7 +33,7 @@ if (filter_has_var(INPUT_POST, "btnGravar")):
             echo "<script>window.alert('Erro ao alterar Propriedade.');</script>";
         }
     endif;
-     echo "<script>window.location.href='gerPropriedade.php';</script>";
+    echo "<script>window.location.href='gerPropriedade.php';</script>";
 endif;
 ?>
 
@@ -139,10 +139,7 @@ endif;
             </div>
         </form>
     </main>
-    <footer>
-        <?php require_once("_parts/_footer.php"); ?>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <?php require_once("_parts/_footer.php"); ?>
 </body>
 
 </html>

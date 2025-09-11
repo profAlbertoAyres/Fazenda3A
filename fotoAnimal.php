@@ -45,7 +45,7 @@ if (filter_has_var(INPUT_GET, "idAnimal")) {
                 ?>
 
                 <div class="card">
-                    <img src="uploads/<?= $foto->nome ?>" class="card-img-top" alt="...">  
+                    <img src="uploads/<?= $foto->nome ?>" class="card-img-top" alt="...">
                     <div class="card-body">
 
                         <p class="card-text"><?= $foto->legenda ?></p>
@@ -69,10 +69,7 @@ if (filter_has_var(INPUT_GET, "idAnimal")) {
             <?php endforeach ?>
         </div>
     </main>
-    <footer>
-        <?php require_once "_parts/_footer.php"; ?>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <?php require_once "_parts/_footer.php"; ?>
     <script src="JS/exibir.js"></script>
 </body>
 

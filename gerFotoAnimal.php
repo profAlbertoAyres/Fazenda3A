@@ -24,11 +24,11 @@
         $idAnimal = null;
         if (filter_has_var(INPUT_POST, 'btnEditar')):
             $f = new FotoAnimal();
-            $idFoto = filter_input(INPUT_POST,'idAnimal');
-            $foto = $f->search('id_foto',$idFoto);
+            $idFoto = filter_input(INPUT_POST, 'idAnimal');
+            $foto = $f->search('id_foto', $idFoto);
             $idAnimal = $foto->id_foto;
         elseif (filter_has_var(INPUT_GET, 'idAnimal')):
-            $idAnimal = filter_input(INPUT_GET,'idAnimal');
+            $idAnimal = filter_input(INPUT_GET, 'idAnimal');
         endif;
 
         ?>
@@ -54,10 +54,7 @@
             </div>
         </form>
     </main>
-    <footer>
-        <?php require_once("_parts/_footer.php"); ?>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <?php require_once("_parts/_footer.php"); ?>
 </body>
 
 </html>

@@ -8,7 +8,7 @@ spl_autoload_register(function ($class) {
 $home = new Home();
 $imgFile = new Imagem(diretorio:"uploads/home/", prefixo: "home_");
 if (filter_has_var(INPUT_POST, "btnGravar")):
-    $home->iniciaTrans();
+    $home->iniciarTransacao();
     try {
         $idHome = filter_input(INPUT_POST, 'idHome');
         $fotoAntiga = filter_input(INPUT_POST, 'fotoAntiga');
@@ -37,10 +37,10 @@ if (filter_has_var(INPUT_POST, "btnGravar")):
             }
         endif;
         echo "<script>window.alert('$mensagem'); window.location.href='homes.php';</script>";
-        $home->confirmaTrans();
+        $home->confirmarTransacao();
     } catch (\Throwable $th) {
         $imgFile->deletar($nomeArquivo);
-        $home->cancelarTrans();
+        $home->cancelarTransacao();
         $erro = $th->getMessage(); // pega mensagem detalhada
         echo "<script>
         window.alert('Erro: " . addslashes($erro) . "');

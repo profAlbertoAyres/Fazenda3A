@@ -1,5 +1,5 @@
 <?php
-    // require_once "verifica_usuario.php";
+// require_once "verifica_usuario.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -51,38 +51,34 @@
 
                     $nivel_selecionado = $usuario->nivel_acesso ?? null;
                     foreach ($niveis as $valor => $rotulo):
-                    ?>
-                        <option value="<?php echo $valor ?>" <?php if($nivel_selecionado == $valor) echo 'selected' ?> ><?php echo $rotulo;?></option>
-                    <?php endforeach;?>
+                        ?>
+                        <option value="<?php echo $valor ?>" <?php if ($nivel_selecionado == $valor)
+                               echo 'selected' ?>>
+                            <?php echo $rotulo; ?></option>
+                    <?php endforeach; ?>
 
                 </select>
             </div>
-            <?php if(empty($idUsuario)): ?>
-            <div class="col-md-6">
-                <label for="senha" class="form-label">Senha</label>
-                <input type="password" name="senha" id="senha" required
-                    class="form-control">
-            </div>
-            <div class="col-md-6">
-                <label for="confirma" class="form-label">confirma</label>
-                <input type="password" name="confirma" id="confirma" required
-                    class="form-control">
-            </div>
-            <div class="col-12">
-                <label for="email" class="form-label">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="Digite o e-mail" required
-                    class="form-control">
-            </div>
+            <?php if (empty($idUsuario)): ?>
+                <div class="col-md-6">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="password" name="senha" id="senha" required class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="confirma" class="form-label">confirma</label>
+                    <input type="password" name="confirma" id="confirma" required class="form-control">
+                </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Digite o e-mail" required class="form-control">
+                </div>
             <?php endif; ?>
             <div class="col-12">
                 <button type="submit" name="btnGravar" class="btn btn-success">Gravar</button>
             </div>
         </form>
     </main>
-    <footer>
-        <?php require_once("_parts/_footer.php"); ?>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <?php require_once("_parts/_footer.php"); ?>
 </body>
 
 </html>

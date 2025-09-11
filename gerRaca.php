@@ -25,22 +25,20 @@
         }
         ?>
         <form action="dbRaca.php" method="post" class="row g3 mt-3">
-        <input type="hidden" value="<?php echo $raca->id_raca ?? null;?>" name="idRaca" >
+            <input type="hidden" value="<?php echo $raca->id_raca ?? null; ?>" name="idRaca">
             <div class="col-12 mt-3">
                 <!-- Rotulo -->
                 <label for="raca" class="form-label">Raça</label>
                 <!-- caixa de texto -->
-                <input type="text" name="raca" id="raca" placeholder="Digite o nome da raça" required class="form-control" value="<?php echo $raca->nome ??null; ?>">
+                <input type="text" name="raca" id="raca" placeholder="Digite o nome da raça" required
+                    class="form-control" value="<?php echo $raca->nome ?? null; ?>">
             </div>
             <div class="col-12 mt-3">
                 <button type="submit" name="btnGravar" id="btnGravar" class="btn btn-outline-primary">Gravar</button>
             </div>
         </form>
     </main>
-    <footer>
-        <?php require_once "_parts/_footer.php"; ?>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <?php require_once "_parts/_footer.php"; ?>
 </body>
 
 </html>

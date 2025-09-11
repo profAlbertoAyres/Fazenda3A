@@ -22,7 +22,7 @@
             require_once "classes/{$class}.class.php";
         });
         $idHome;
-        if (filter_has_var(INPUT_POST, "btnEditar")) :
+        if (filter_has_var(INPUT_POST, "btnEditar")):
             $h = new Home();
             $idHome = intval(filter_input(INPUT_POST, "idHome"));
             $home = $h->search("id_home", $idHome);
@@ -43,7 +43,8 @@
             </div>
             <div class="col-12">
                 <label for="mensagem" class="form-label">Mensagem</label>
-                <textarea name="mensagem" id="mensagem" class="form-control"><?php echo $home->mensagem ?? null; ?></textarea>
+                <textarea name="mensagem" id="mensagem"
+                    class="form-control"><?php echo $home->mensagem ?? null; ?></textarea>
             </div>
             <div class="col-12 mt-3">
                 <label for="imagem" class="form-label">Foto</label>
@@ -54,10 +55,7 @@
             </div>
         </form>
     </main>
-    <footer>
-        <?php require_once("_parts/_footer.php"); ?>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <?php require_once("_parts/_footer.php"); ?>
 </body>
 
 </html>
