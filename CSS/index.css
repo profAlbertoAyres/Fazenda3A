@@ -1,72 +1,67 @@
-.dest{
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../Images/banner.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-size: 4vw;
-    text-align: center;
-    text-shadow: 
-        1px 1px 0 #fff,
-        2px 2px 4px #f00;
-    font-weight: bold;
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
-section{
-    padding: 20px;
-    margin: 20px 0;
-    background-color: #ddd;
-    /* background: linear-gradient(to right, #5fc2cf, #70aae7); */
-    /* background: linear-gradient(45deg, #5fc2cf, #70aae7, #252525); */
-    /* background: radial-gradient(circle, #ac1e1e, #ccc); */
-    /* background:  conic-gradient(from 45deg, #f00, #0f0, #00f, #ddd); */
-    border-radius: 10px;
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card {
+  flex: 0 0 calc(100% / 3 - 1rem);
+}
+
+.div-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.div-carousel .card{
+    margin: 10px 3px;
 }
 
 
-section h2{
-    text-align: center;
-    border-bottom: 2px solid #2c3e50;
-    /* font-family: var(--font-secundaria); */
+.list-card {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  justify-content: flex-start;
 
 }
 
-section .msn{
-    display: flex;
-    gap: 10px;
-    align-items: center;
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;   
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-section .msn img{
-    width: 40%;
-    height: auto;
+.text-justify{
+  text-align: justify;
 }
 
-section p, ul{
-    font-size: 20pt;
-    font-family: var(--font-secundaria);
+#animais img {
+  height: 200px;      /* defina a altura fixa que quiser */
+  width: 100%;        /* ocupa toda a largura */
+  object-fit: contain;  /* corta as bordas se necessário */
 }
 
-@media screen and (max-width:768px) {
-    main{
-        width: 100%;
-    }
-    section .msn{
-        flex-direction: column;
-    }
+section {
+  scroll-margin-top: 80px;
+}
 
-    section p,ul{
-        text-align: justify;
-    }
-    section .msn img{
-        width: 100%;
-        height: auto;
-    }   
-    .dest{
-        padding: 10px;
-    }
-    
+/* Tablet: 2 cards */
+@media (max-width: 991px) {
+  .card {
+    flex: 0 0 calc(100% / 2 - 1rem);
+  }
+}
+
+/* Celular: 1 card */
+@media (max-width: 767px) {
+  .card {
+    flex: 0 0 100%;
+  }
 }

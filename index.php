@@ -23,15 +23,6 @@ $nomePropriedade = $propriedade->nome;
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="CSS/baseSite.css">
   <link rel="stylesheet" href="CSS/index.css">
-  <style>
-    footer {
-      background-color: #2d572c;
-      color: #fff;
-      padding: 1rem 0;
-      text-align: center;
-      margin-top: 3rem;
-    }
-  </style>
 </head>
 
 <body>
@@ -77,7 +68,7 @@ $nomePropriedade = $propriedade->nome;
           <h2 class="mb-3 text-center">Quem Somos</h2>
           <!-- Imagem -->
           <div class="col-md-6 mb-4 mb-md-0">
-            <img src="Images/FazendaBoiGordo.png" class="img-fluid rounded shadow" alt="Nossa Fazenda">
+            <img src="Images/touro.png" class="img-fluid rounded shadow" alt="Nossa Fazenda">
           </div>
           <!-- Texto -->
           <div class="col-md-6">

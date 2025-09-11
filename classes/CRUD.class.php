@@ -34,17 +34,35 @@ abstract class CRUD
     }
 
     // Método para excluir um registro pelo ID
-    public function delete($campo, int $id): bool
+    public function delete($campo, int $id): array
     {
         $sql = "DELETE FROM $this->table WHERE $campo = :id";
         $stmt = $this->db->prepare($sql);
         $stmt->bindParam(":id", $id, PDO::PARAM_INT);
 
         try {
-            return $stmt->execute();
+            $stmt->execute();
+            return [
+                'success' => true,
+                'message' => 'Registro excluído com sucesso.'
+            ];
         } catch (PDOException $e) {
-            error_log("Erro ao excluir registro: " . $e->getMessage());
-            return false;
+            $errorCode = $e->errorInfo[1] ?? null;
+
+            if ($errorCode == 1451) {
+                // Caso de chave estrangeira
+                return [
+                    'success' => false,
+                    'message' => 'Não é possível excluir: o registro possui relacionamentos em outra tabela.'
+                ];
+            }
+
+            // Outros erros → mostra código e mensagem
+            return [
+                'success' => false,
+                'message' => "Erro ao excluir (código $errorCode): {$e->getMessage()}. 
+                           Procure o Administrador do sistema."
+            ];
         }
     }
 
