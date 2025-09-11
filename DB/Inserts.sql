@@ -1,12 +1,106 @@
-CREATE TABLE nutricao (
-    id_nutricao INT AUTO_INCREMENT PRIMARY KEY,
-    fase_produtiva VARCHAR(100) NOT NULL,   -- Ex: "Bezerro em desmama", "Vaca em lactação"
-    titulo VARCHAR(150) NOT NULL,           
-    descricao TEXT NOT NULL,                
-    data_publicacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    autor VARCHAR(100) DEFAULT 'Admin',
-    status TINYINT DEFAULT 1
-);
+-- Raças
+INSERT INTO raca (nome) VALUES 
+('Nelore'), 
+('Angus'), 
+('Brahman'), 
+('Gir'), 
+('Guzerá'),
+('Senepol'), 
+('Tabapuã'), 
+('Caracu'), 
+('Canadense'), 
+('Hereford'),
+('Brangus'),
+('Normando'),
+('Senepol'),
+('Santa Gertrudis'),
+('Girolando'),
+('Guernsey'),
+('Braford'),
+('Murray Grey'),
+('Romagnola'),
+('Holandês');
+
+-- Lotes
+INSERT INTO lote (descricao) VALUES 
+('Lote 1 - Área A'), ('Lote 2 - Área B'), ('Lote 3 - Área C'), ('Lote 4 - Área D'), ('Lote 5 - Área E'),
+('Lote 6 - Área F'), ('Lote 7 - Área G'), ('Lote 8 - Área H'), ('Lote 9 - Área I'), ('Lote 10 - Área J');
+
+-- Fornecedores
+INSERT INTO fornecedor (nome, telefone, email) VALUES 
+('Fornecedor A', '99999-0001', 'a@fornecedor.com'),
+('Fornecedor B', '99999-0002', 'b@fornecedor.com'),
+('Fornecedor C', '99999-0003', 'c@fornecedor.com'),
+('Fornecedor D', '99999-0004', 'd@fornecedor.com'),
+('Fornecedor E', '99999-0005', 'e@fornecedor.com'),
+('Fornecedor F', '99999-0006', 'f@fornecedor.com'),
+('Fornecedor G', '99999-0007', 'g@fornecedor.com'),
+('Fornecedor H', '99999-0008', 'h@fornecedor.com'),
+('Fornecedor I', '99999-0009', 'i@fornecedor.com'),
+('Fornecedor J', '99999-0010', 'j@fornecedor.com');
+
+-- Categorias (Tipos de Produto)
+INSERT INTO categoria (nome) VALUES 
+('Ração'), ('Medicamento'), ('Vacina'), ('Suplemento'), ('Equipamento'),
+('Ferramenta'), ('Higiene'), ('Tratamento'), ('Alimento'), ('Outros');
+
+-- Produtos
+INSERT INTO produto (nome, id_categoria) VALUES 
+('Ração Premium', 1), ('Vermífugo Bovino', 2), ('Vacina Aftosa', 3),
+('Suplemento Mineral', 4), ('Cocho Plástico', 5), ('Seringa', 6),
+('Shampoo Veterinário', 7), ('Pomada Anti-inflamatória', 8),
+('Silagem de Milho', 9), ('Caminhão de Transporte', 10);
+
+-- Compras
+INSERT INTO compra (data, id_fornecedor) VALUES 
+('2025-04-08', 1), ('2025-04-08', 2), ('2025-04-08', 3),
+('2025-04-08', 4), ('2025-04-08', 5), ('2025-04-08', 6),
+('2025-04-08', 7), ('2025-04-08', 8), ('2025-04-08', 9),
+('2025-04-08', 10);
+
+-- Itens de Compra
+INSERT INTO item_compra (id_compra, id_produto, quantidade, preco_unitario) VALUES 
+(1, 1, 5, 120.00), (2, 2, 10, 35.50), (3, 3, 8, 42.00), (4, 4, 3, 98.90),
+(5, 5, 2, 230.00), (6, 6, 6, 15.00), (7, 7, 4, 22.00), (8, 8, 7, 58.00),
+(9, 9, 10, 18.50), (10, 10, 1, 1550.00);
+
+-- Manejos
+INSERT INTO manejo (data, descricao, id_lote) VALUES 
+('2025-04-08', 'Vacinação contra febre aftosa', 1),
+('2025-04-08', 'Aplicação de vermífugo', 2),
+('2025-04-08', 'Revisão de cochos', 3),
+('2025-04-08', 'Suplementação alimentar', 4),
+('2025-04-08', 'Higienização da área de pasto', 5),
+('2025-04-08', 'Aplicação de carrapaticida', 6),
+('2025-04-08', 'Transporte para área nova', 7),
+('2025-04-08', 'Avaliação de saúde', 8),
+('2025-04-08', 'Recolhimento para vacinação', 9),
+('2025-04-08', 'Pesar os animais', 10);
+
+-- Animais (sem mãe para simplificar)
+INSERT INTO animal (identificador, data_nascimento, sexo, id_raca, id_lote) VALUES 
+('9401', '2022-01-10', 'M', 1, 1),
+('9402', '2021-02-15', 'F', 2, 2),
+('9403', '2020-03-20', 'F', 3, 3),
+('9404', '2021-04-25', 'F', 4, 4),
+('9405', '2022-05-30', 'F', 5, 5),
+('9406', '2021-06-05', 'F', 6, 6),
+('9407', '2020-07-10', 'F', 7, 7),
+('9408', '2022-08-15', 'F', 8, 8),
+('9409', '2021-09-20', 'F', 9, 9),
+('9410', '2024-10-25', 'M', 10, 10);
+
+INSERT INTO animal (identificador, data_nascimento, sexo, id_raca, id_mae, id_lote)
+VALUES 
+('E2003412012345678920', '2025-01-10', 'F', 1, 3, 1),
+('E2003412012345678921', '2025-02-14', 'M', 2, 4, 2),
+('E2003412012345678922', '2025-03-20', 'F', 3, 6, 3),
+('E2003412012345678923', '2025-04-18', 'M', 1, 7, 1),
+('E2003412012345678924', '2024-05-25', 'F', 2, 9, 2);
+
+
+-- nutricao
+
 
 INSERT INTO nutricao (fase_produtiva, titulo, descricao, autor) VALUES
 ('Bezerro em aleitamento', 'Colostro nas primeiras horas', 

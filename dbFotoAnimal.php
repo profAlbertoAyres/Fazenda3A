@@ -12,14 +12,26 @@ if (filter_has_var(INPUT_POST, "btnGravar")):
     try {   
         $idFoto = filter_input(INPUT_POST, 'idFoto');
         $idAnimal = filter_input(INPUT_POST, 'idAnimal');
+        $fotoAntiga = filter_input(INPUT_POST,'fotoAntiga');
+        $foto->setNome($fotoAntiga);
+        if(!empty($_FILES['foto']['name'])){
+            $nomeArquivo = $imgFile->upload($_FILES['foto']);
+            $foto->setNome($nomeArquivo);
+            if(!empty($fotoAntiga)){
+                $imgFile->deletar($fotoAntiga);
+            }
+        }
+
         $foto->setAnimal( $idAnimal);
-        $nomeArquivo = $imgFile->upload($_FILES['foto']);
-        $foto->setNome($nomeArquivo);
         $foto->setAlternativo(filter_input(INPUT_POST, 'textoAlt'));
         $foto->setLegenda(filter_input(INPUT_POST, 'legenda'));
         if(empty($idFoto)){
             if($foto->add()){
                 $mensagem = 'Foto adicionada com sucesso.';
+            }
+        }else{
+            if($foto->update('id_foto',$idFoto)){
+                $mensagem = 'Foto atualizada com sucesso.';
             }
         }
         $foto->confirmarTransacao();
