@@ -10,7 +10,7 @@ $foto = new FotoAnimal();
 $propriedade = $seachProp->search("id_propriedade", 1);
 $home = new Home();
 
-$nomePropriedade = $propriedade->nome;
+$nomePropriedade = $propriedade->nome ?? null;
 
 ?>
 <!DOCTYPE html>
@@ -72,7 +72,7 @@ $nomePropriedade = $propriedade->nome;
           </div>
           <!-- Texto -->
           <div class="col-md-6">
-            <?= $propriedade->historia ?>
+            <?= $propriedade->historia ?? null ?>
           </div>
         </div>
         <div class="text-center mt-4">
@@ -225,23 +225,23 @@ $nomePropriedade = $propriedade->nome;
       <div class="container text-center">
         <h2 class="mb-4">Entre em Contato</h2>
         <p class="mb-5">Estamos sempre à disposição para atender você!</p>
-
+        
         <div class="row justify-content-center mb-4">
-          <!-- Email -->
-          <div class="col-md-5 mb-3">
-            <div class="card bg-transparent border-0 text-light">
-              <div class="card-body">
-                <i class="bi bi-envelope-fill fs-2 mb-2"></i>
-                <p class="mb-0"><?= $propriedade->email?></p>
-              </div>
-            </div>
-          </div>
           <!-- Telefone -->
           <div class="col-md-3 mb-3">
             <div class="card bg-transparent border-0 text-light">
               <div class="card-body">
                 <i class="bi bi-telephone-fill fs-2 mb-2"></i>
-                <p class="mb-0"><?= $propriedade->telefone?></p>
+                <p class="mb-0"><?= $propriedade->telefone ?? null ?></p>
+              </div>
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="col-md-5 mb-3">
+            <div class="card bg-transparent border-0 text-light">
+              <div class="card-body">
+                <i class="bi bi-envelope-fill fs-2 mb-2"></i>
+                <p class="mb-0"><?= $propriedade->email ?? null?></p>
               </div>
             </div>
           </div>
@@ -251,10 +251,10 @@ $nomePropriedade = $propriedade->nome;
               <div class="card-body">
                 <i class="bi bi-share-fill fs-2 mb-2"></i>
                 <p class="mb-0">
-                  <a href="<?= $propriedade->facebook?>" class="text-light me-2"><i class="bi bi-facebook"></i></a>
-                  <a href="<?= $propriedade->instagram?>" class="text-light me-2"><i class="bi bi-instagram"></i></a>
-                  <a href="<?= $propriedade->youtube?>" class="text-light me-2"><i class="bi bi-youtube"></i></a>
-                  <a href="<?= $propriedade->whatsapp?>" class="text-light"><i class="bi bi-whatsapp"></i></a>
+                  <a href="<?= $propriedade->facebook ?? '#'?>" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+                  <a href="<?= $propriedade->instagram ?? '#'?>" class="text-light me-2"><i class="bi bi-instagram"></i></a>
+                  <a href="<?= $propriedade->youtube  ?? '#'?>" class="text-light me-2"><i class="bi bi-youtube"></i></a>
+                  <a href="<?= $propriedade->whatsapp ?? '#'?>" class="text-light"><i class="bi bi-whatsapp"></i></a>
                 </p>
               </div>
             </div>
