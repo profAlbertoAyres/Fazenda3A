@@ -5,26 +5,6 @@
     --cor-fonte-menu: #fff !important;
 }
 
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: var(--cor-texto-claro);
-    background-color: var(--cor-principal);
-    padding: 10px;
-}
-
-
-header img {
-    width: 150px;
-}
-
-header .empresa {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
 .nav-custom {
     background-color: var(--cor-menu);
 }
