@@ -1,5 +1,5 @@
 <?php
-    require_once "verifica_usuario.php";
+require_once "verifica_usuario.php";
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +14,7 @@
 </head>
 
 <body>
-    <header>
-        <?php require_once "_parts/_menu.php"; ?>
-    </header>
+    <?php require_once "_parts/_menu.php"; ?>
     <main class="container mt-3">
         <div class="mt-3">
             <h3>Conteúdos</h3>
@@ -67,7 +65,7 @@
             </tbody>
         </table>
     </main>
-        <?php require_once "_parts/_footer.php"; ?>
+    <?php require_once "_parts/_footer.php"; ?>
 </body>
 
 </html>

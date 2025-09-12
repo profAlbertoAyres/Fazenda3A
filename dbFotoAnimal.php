@@ -44,5 +44,21 @@ if (filter_has_var(INPUT_POST, "btnGravar")):
     }
 
 elseif (filter_has_var(INPUT_POST, "btnDeletar")):
-    
+    try {
+        $foto->iniciarTransacao();
+        $idFoto = intval(filter_input(INPUT_POST,'idFoto'));
+        $ftDel = $foto->search('id_foto', $idFoto);
+        $imgFile->deletar($ftDel->nome);
+        if($foto->delete('id_foto',$idFoto)){
+            header("location:fotoAnimal.php?idAnimal=$ftDel->fk_animal");
+        }
+        $foto->confirmarTransacao();
+    } catch (\Throwable $th) {
+        $foto->cancelarTransacao();
+        $erro = $th->getMessage();
+        echo "<script>
+                window.alert('Erro: $erro.');
+                window.open(document.referrer,'_self');
+              </script>";
+    }    
 endif;
