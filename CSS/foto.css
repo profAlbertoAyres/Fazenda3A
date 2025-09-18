@@ -8,6 +8,7 @@
   .card {
     flex: 0 0 calc(100% / 2 - 1rem);
   }
+
 }
 
 /* Celular: 1 card */
