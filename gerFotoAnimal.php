@@ -34,8 +34,8 @@
         ?>
         <form method="post" action="dbFotoAnimal.php" class="row g-3 mt-3" enctype="multipart/form-data">
             <input type="hidden" name="idAnimal" value="<?php echo $idAnimal ?? null ?>">
-            <input type="hidden" name="idFoto" value="<?= $foto->id_foto ?>">
-            <input type="hidden" name="fotoAntiga" value="<?= $foto->nome ?>">
+            <input type="hidden" name="idFoto" value="<?= $foto->id_foto ?? null ?>">
+            <input type="hidden" name="fotoAntiga" value="<?= $foto->nome ?? null ?>">
             <div class="col-md-6 mt-3">
                 <label for="legenda" class="form-label">Legenda</label>
                 <input type="text" name="legenda" id="legenda" placehoader="Digite a legenda da foto" required
