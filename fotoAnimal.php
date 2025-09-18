@@ -19,6 +19,7 @@ if (filter_has_var(INPUT_GET, "idAnimal")) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/baseAdmin.css">
+    <link rel="stylesheet" href="CSS/foto.css">
     <title>Fotos do animal: <?php echo $animal->identificador ?></title>
 </head>
 
@@ -70,7 +71,6 @@ if (filter_has_var(INPUT_GET, "idAnimal")) {
         </div>
     </main>
     <?php require_once "_parts/_footer.php"; ?>
-    <script src="JS/exibir.js"></script>
 </body>
 
 </html>
