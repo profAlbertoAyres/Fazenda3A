@@ -147,4 +147,8 @@ table {
     main > div {
         padding: 10px;
     }
+
+    .conteudo{
+        margin-top: 50px;
+    }
 }
