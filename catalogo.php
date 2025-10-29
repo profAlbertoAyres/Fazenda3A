@@ -16,9 +16,8 @@
     <main class="container mt-5">
         <h2 class="text-center mb-5">Conheça Nossos Animais</h2>
         <div class="d-flex gap-4 justify-content-center flex-wrap">
-
             <div class="card">
-                <!-- iamgens -->
+                <!-- Imagens -->
 
                 <div id="carouselAnimal-" class="carousel slide">
                     <div class="carousel-inner">
