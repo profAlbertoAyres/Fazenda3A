@@ -1,6 +1,3 @@
-<?php
-// require_once "verifica_usuario.php";
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -54,7 +51,8 @@
                         ?>
                         <option value="<?php echo $valor ?>" <?php if ($nivel_selecionado == $valor)
                                echo 'selected' ?>>
-                            <?php echo $rotulo; ?></option>
+                            <?php echo $rotulo; ?>
+                        </option>
                     <?php endforeach; ?>
 
                 </select>
@@ -62,11 +60,31 @@
             <?php if (empty($idUsuario)): ?>
                 <div class="col-md-6">
                     <label for="senha" class="form-label">Senha</label>
-                    <input type="password" name="senha" id="senha" required class="form-control">
+                    <div class="input-group">
+                        <input type="password" id="senha" class="form-control">
+                        <button type="button" id="toggleSenha" class="btn btn-outline-secondary">
+                            👁️
+                        </button>
+                    </div>
+                    <p id="forcaSenha" class="fw-bold"></p>
+                    <ol id="requisitos" class="mb-3 mt-3">
+                        <li id="minChar" class="invalido">Mínimo 8 caracteres</li>
+                        <li id="maiuscula" class="invalido">Pelo menos uma letra maiúscula</li>
+                        <li id="minuscula" class="invalido">Pelo menos uma letra minúscula</li>
+                        <li id="numero" class="invalido">Pelo menos um número</li>
+                        <li id="especial" class="invalido">Pelo menos um caractere especial (!@#$%^&*...)</li>
+                    </ol>
+
                 </div>
                 <div class="col-md-6">
                     <label for="confirma" class="form-label">confirma</label>
-                    <input type="password" name="confirma" id="confirma" required class="form-control">
+                    <div class="input-group">
+                        <input type="password" id="confirmar" class="form-control">
+                        <button type="button" id="toggleConfirmar" class="btn btn-outline-secondary">
+                            👁️
+                        </button>
+                    </div>
+                    <small id="msgConfirmacao"></small>
                 </div>
                 <div class="col-12">
                     <label for="email" class="form-label">E-mail</label>
@@ -74,11 +92,12 @@
                 </div>
             <?php endif; ?>
             <div class="col-12">
-                <button type="submit" name="btnGravar" class="btn btn-success">Gravar</button>
+                <button type="submit" name="btnGravar" id="btnSalvar" class="btn btn-success" disabled>Gravar</button>
             </div>
         </form>
     </main>
-    <?php require_once("_parts/_footer.php"); ?>
+    <?php require_once "_parts/_footer.php"; ?>
+    <script src="JS/senha.js"></script>
 </body>
 
 </html>
