@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="CSS/baseAdmin.css">
     <title>Raças</title>
 </head>
@@ -20,7 +21,7 @@
         <div class="mt-3 mb-3">
             <a href="gerRaca.php" class="btn btn-outline-success">Nova raça</a>
         </div>
-        <table class="table">
+        <table class="table dataTable">
             <thead class="table-secondary">
                 <tr>
                     <th scope="col" class="text-center">#</th>
@@ -64,6 +65,14 @@
     </main>
 
     <?php require_once "_parts/_footer.php"; ?>
+    <!--jquery Primeiro-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="JS/paginacao.js"></script>
+
 </body>
 
 </html>

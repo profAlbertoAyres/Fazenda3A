@@ -1,8 +1,28 @@
 @import url('base.css');
 
 :root{
-    --cor-menu: #2d572c !important;
+    --cor-menu: #2d572c;
     --cor-fonte-menu: #fff !important;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-principal);
+    padding: 10px;
+}
+
+
+header img {
+    width: 150px;
+}
+
+header .empresa {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .nav-custom {
@@ -26,10 +46,84 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card {
+  flex: 0 0 calc(100% / 3 - 1rem);
+}
+
+.div-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.div-carousel .card{
+    margin: 10px 3px;
+}
 
 
+.list-card {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  justify-content: flex-start;
+
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;   
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-justify{
+  text-align: justify;
+}
+.carousel-inner img, .semFotoC {
+  height: 200px;            /* altura fixa do carrossel */
+  width: auto;              /* largura automática (mantém proporção) */
+  object-fit: cover;        /* corta o excesso, sem distorcer */
+  margin: 0 auto;           /* centraliza horizontalmente */
+  border-radius: 8px;       /* opcional: cantos arredondados */
+}
+
+
+#animais img {
+  height: 200px;      /* defina a altura fixa que quiser */
+  width: 100%;        /* ocupa toda a largura */
+  object-fit: contain;  /* corta as bordas se necessário */
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Tablet: 2 cards */
 @media screen and (max-width: 992px) {
     header {
         flex-direction: column;
     }
+    .card {
+        flex: 0 0 calc(100% / 2 - 1rem);
+    }
+}
+
+/* Celular: 1 card */
+@media (max-width: 767px) {
+  .card {
+    flex: 0 0 100%;
+  }
+    .carousel-inner img, .semFotoC {
+    height: 150px;
+  }
 }
